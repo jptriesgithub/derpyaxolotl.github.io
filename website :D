@@ -1,1 +1,87 @@
-#hehehe Justin is bald :D
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>The stats and history behind Messi</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="logo-transparent-png.png" alt="MessiNews Logo">
+    </div>
+    <nav>
+      <ul>
+        <div class="dropdown" onclick="toggleDropdown('dropdown2')">
+          <button onclick="myFunction2()" class="dropbtn">Main Page</button>
+          <div id="dropdown2" class="dropdown-content">
+            <a href="#main">Main Page</a>
+            <a href="#Intro">Introduction</a>
+            <a href="#collage">Collage</a>
+          </div>
+        </div>
+        <div class="dropdown" onclick="toggleDropdown('dropdown1')">
+            <button onclick="myFunction1()" class="dropbtn">Career, Relationships and Fun Facts</button>
+          <div id="dropdown1" class="dropdown-content">
+            <a href="careerrelationshipsandfunfacts.html#CRFF"> Career, Relationships and Fun Facts</a>
+            <a href="careerrelationshipsandfunfacts.html#CRFF1">Career Path</a>
+            <a href="careerrelationshipsandfunfacts.html#CRFF2">Relationships</a>
+            <a href="careerrelationshipsandfunfacts.html#CRFF3">Fun Facts</a>
+          </div>
+        </div>
+        <div class="dropdown" onclick="toggleDropdown('dropdown3')">
+          <button onclick="myFunction3()" class="dropbtn">Stats</button>
+          <div id="dropdown3" class="dropdown-content">
+            <a href="stats.html#statistics">Stats</a>
+            <a href="stats.html#stats">All Time Statistics</a>
+            <a href="stats.html#world records">World Records</a>
+          </div>
+        </div>
+      </ul>
+    </nav>
+  </div>
+  <div class="content">
+    <h1 id="main">The stats and history behind Messi</h1>
+    <img src="https://staticg.sportskeeda.com/wp-content/uploads/2015/08/lionel-messi-dribbling-several-defenders-like-maradona-1412178500-1440788666-800.jpg" alt="Lionel Messi dribbling through three players in green shirts with two of them failing to slide tackle him" width="700">
+     <h2 id="Intro">Introduction:</h2>
+      <p>Lionel Messi, full name, Lionel Andrés Messi is an Argentine footballer that currently plays for Inter Miami. He was born in Rosario, Argentina two his two loving parents Celia María Cuccittini and Jorge Messi. Since he was young Messi fell in love with the beautiful sport and when he turned 13 was signed to his dream team, Barcelona FC. Just 4 years later he signed his first professional contract on a paper napkin. This was done because the coaches were so impressed with his skills they wanted to sign him right away and they didn't have paper at the time.</p>
+  </div>
+  <img id="collage" src="lionelmessicollage.jpeg" alt="Several photos of Lionel Messi, dribbling, celebrating showing his awards and trophies" width="700"">
+
+
+  <a class="landr" target="_blank" href="https://docs.google.com/document/d/1H978djDyZER2LHZhq4hRom94wxjTk-toJrLTzvvfiP4/edit">Links/References</a>
+  
+  <script src="script.js"></script>
+</body>
+  <script>
+  let lastScrollTop = 0;
+
+  window.addEventListener("scroll", function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      document.querySelector(".header").style.top = "-60px";
+    } else {
+      document.querySelector(".header").style.top = "0";
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+  </script>
+
+  <script>
+    function toggleDropdown(dropdownId) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+      for (var i = 0; i < dropdowns.length; i++) {
+        if (dropdowns[i].id !== dropdownId) {
+          dropdowns[i].style.display = 'none';
+        }
+      }
+      var currentDropdown = document.getElementById(dropdownId);
+      currentDropdown.style.display = currentDropdown.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</html>
